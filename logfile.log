@@ -1,0 +1,17 @@
+2021-05-28 06:58:15,916 INFO  [Log4j] Go to login page 
+2021-05-28 06:58:21,490 INFO  [Log4j] email address : testselenium1016@gmail.com ,password : Test.1016 
+2021-05-28 06:58:28,316 INFO  [Log4j] LOGGED! 
+2021-05-28 06:58:28,338 INFO  [Log] login_check()Passed 
+2021-05-28 06:58:30,563 INFO  [Log4j] bilgisayar keyword entered 
+2021-05-28 06:58:39,834 INFO  [Log4j] 2nd page opened. 
+2021-05-28 06:58:39,835 INFO  [Log] search_Product()Passed 
+2021-05-28 06:58:45,040 INFO  [Log4j] Product selected. 
+2021-05-28 06:58:45,040 INFO  [Log] click_Product()Passed 
+2021-05-28 06:58:46,684 INFO  [Log4j] product added to cart 
+2021-05-28 06:58:46,685 INFO  [Log] add_Product_To_Cart()Passed 
+2021-05-28 06:58:48,406 INFO  [Log4j] cart opened 
+2021-05-28 06:58:48,422 INFO  [Log] go_To_Cart()Passed 
+2021-05-28 06:58:50,147 INFO  [Log] setProductCountUp()Failed 
+2021-05-28 06:58:50,942 INFO  [Log] deleteProductInCart()Passed 
+2021-05-28 06:58:51,068 INFO  [Log4j] Cart is empty 
+2021-05-28 06:58:51,075 INFO  [Log] isCartEmpty()Passed 
