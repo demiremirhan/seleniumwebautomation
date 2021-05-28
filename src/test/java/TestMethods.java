@@ -11,8 +11,6 @@ import javax.annotation.Nullable;
 import static java.lang.Thread.sleep;
 
 public class TestMethods extends BaseTest {
-    By clickSearchBy = By.className("qjixn8-0");
-    By addToCartBy = By.className("add-to-basket");
     Homepage homepage ;
     ProductsPage productsPage;
     ProductDetailPage productDetailPage;
@@ -21,13 +19,14 @@ public class TestMethods extends BaseTest {
     String password="Test.1016";
     @Test
     @Order(1)
-    public void login_check() {
+    public void login() {
         Log4j.info("Go to login page");
         Homepage homepage = new Homepage(driver);
         LoginPage loginPage = homepage.getLoginPage();
         Log4j.info("email address : " + email+" ,password : "+password);
         User user = new User(email,password);
         loginPage.login(user);
+        Assertions.assertTrue(homepage.isOnHomePage(),"Login failed.");
         Log4j.info("LOGGED!");
     }
     @Test
@@ -60,45 +59,32 @@ public class TestMethods extends BaseTest {
         productDetailPage = new ProductDetailPage(driver);
         productsPage = new ProductsPage(driver);
         productsPage.scrollToPage("700");
-        delay = new WebDriverWait(driver, 1);
         productDetailPage.addToCart();
         Log4j.info("product added to cart");
-        delay = new WebDriverWait(driver, 5);
 
+        delay = new WebDriverWait(driver, 3);
+
+       CartPage cartPage= productDetailPage.goToCart();
+       Assertions.assertEquals(productDetailPage.productPrice(),cartPage.priceInCart());
+        Log4j.info("cart opened");
     }
     @Test
     @Order(5)
-    public void go_To_Cart(){
-        productDetailPage = new ProductDetailPage(driver);
-        productDetailPage.goToCart();
-        Log4j.info("cart opened");
+    public void set_Product_CountUp(){
 
-//        CartPage cartPage=productDetailPage.goToCart();
-      //  Assertions.assertEquals(productDetailPage.productPrice(),cartPage.priceInCart());
-
-    }
-    @Test
-    @Order(6)
-    public void setProductCountUp(){
         cartPage = new CartPage(driver);
         cartPage.setNumberOfProduct();
         delay = new WebDriverWait(driver, 3);
-        Assertions.assertTrue(cartPage.getNumberProduct().contains("2 adet"));
+        Assertions.assertTrue(cartPage.getNumberProduct().contains("2"),"stock is not enough");
         Log4j.info("2 product added");
     }
     @Test
-    @Order(7)
-    public void deleteProductInCart(){
+    @Order(6)
+    public void empty_Cart_Check(){
         cartPage = new CartPage(driver);
         cartPage.deleteProduct();
         delay = new WebDriverWait(driver, 3);
-    }
-    @Test
-    @Order(8)
-    public void isCartEmpty(){
-        cartPage = new CartPage(driver);
-        cartPage.isEmpty();
-        delay = new WebDriverWait(driver, 3);
-        Log4j.info("Cart is empty");
+        Assertions.assertEquals("0",cartPage.isEmpty());
+
     }
 }

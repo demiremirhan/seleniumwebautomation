@@ -1,17 +1,15 @@
-2021-05-28 06:58:15,916 INFO  [Log4j] Go to login page 
-2021-05-28 06:58:21,490 INFO  [Log4j] email address : testselenium1016@gmail.com ,password : Test.1016 
-2021-05-28 06:58:28,316 INFO  [Log4j] LOGGED! 
-2021-05-28 06:58:28,338 INFO  [Log] login_check()Passed 
-2021-05-28 06:58:30,563 INFO  [Log4j] bilgisayar keyword entered 
-2021-05-28 06:58:39,834 INFO  [Log4j] 2nd page opened. 
-2021-05-28 06:58:39,835 INFO  [Log] search_Product()Passed 
-2021-05-28 06:58:45,040 INFO  [Log4j] Product selected. 
-2021-05-28 06:58:45,040 INFO  [Log] click_Product()Passed 
-2021-05-28 06:58:46,684 INFO  [Log4j] product added to cart 
-2021-05-28 06:58:46,685 INFO  [Log] add_Product_To_Cart()Passed 
-2021-05-28 06:58:48,406 INFO  [Log4j] cart opened 
-2021-05-28 06:58:48,422 INFO  [Log] go_To_Cart()Passed 
-2021-05-28 06:58:50,147 INFO  [Log] setProductCountUp()Failed 
-2021-05-28 06:58:50,942 INFO  [Log] deleteProductInCart()Passed 
-2021-05-28 06:58:51,068 INFO  [Log4j] Cart is empty 
-2021-05-28 06:58:51,075 INFO  [Log] isCartEmpty()Passed 
+2021-05-28 18:15:14,554 INFO  [Log4j] Go to login page 
+2021-05-28 18:15:20,579 INFO  [Log4j] email address : testselenium1016@gmail.com ,password : Test.1016 
+2021-05-28 18:15:28,742 INFO  [Log4j] LOGGED! 
+2021-05-28 18:15:28,763 INFO  [Log] login()Passed 
+2021-05-28 18:15:30,114 INFO  [Log4j] bilgisayar keyword entered 
+2021-05-28 18:15:40,674 INFO  [Log4j] 2nd page opened. 
+2021-05-28 18:15:40,674 INFO  [Log] search_Product()Passed 
+2021-05-28 18:15:45,980 INFO  [Log4j] Product selected. 
+2021-05-28 18:15:45,982 INFO  [Log] click_Product()Passed 
+2021-05-28 18:15:48,755 INFO  [Log4j] product added to cart 
+2021-05-28 18:15:51,442 INFO  [Log4j] cart opened 
+2021-05-28 18:15:51,442 INFO  [Log] add_Product_To_Cart()Passed 
+2021-05-28 18:15:52,570 INFO  [Log4j] 2 product added 
+2021-05-28 18:15:52,580 INFO  [Log] set_Product_CountUp()Passed 
+2021-05-28 18:15:53,890 INFO  [Log] empty_Cart_Check()Passed 

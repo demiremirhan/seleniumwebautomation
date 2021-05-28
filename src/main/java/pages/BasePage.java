@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,6 +33,9 @@ public class BasePage {
         moveToElement(loginOrRegisterButtonBy);
         click(loginButtonBy,5);
         return new LoginPage(webDriver);
+    }
+    public void assertPrice(String detailP,String  cartP){
+        Assertions.assertEquals(detailP,cartP,"prices is not equal");
     }
     public ProductsPage search(String text){
         webDriver.findElement(searchBoxBy).sendKeys(text+ Keys.ENTER);

@@ -6,8 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Homepage extends BasePage{
-    By locatorbar = By.className("sc-1o6eogh-0");
-    By slider = By.className("GG_hero-slider-pagination swiper-pagination-clickable swiper-pagination-bullets");
+    By slider = By.className("GG_hero-slider-pagination");
 
     public Homepage(WebDriver webDriver) {
         super(webDriver);

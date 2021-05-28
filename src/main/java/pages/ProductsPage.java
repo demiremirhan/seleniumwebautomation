@@ -20,7 +20,7 @@ public class ProductsPage extends BasePage{
 
     public void selectProduct(){
         Random random = new Random();
-        int rand = random.nextInt(30)+1;
+        int rand = random.nextInt(47)+1;
         getAllProducts().get(rand).click();
     }
 
