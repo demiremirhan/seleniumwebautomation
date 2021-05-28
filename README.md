@@ -22,3 +22,4 @@ Yararlanılan kaynaklar:
 6) https://github.com/bonigarcia/webdrivermanager
 7) https://www.baeldung.com/java-random-list-element
 8) https://www.guru99.com/accessing-forms-in-webdriver.html
+9) https://github.com/MaksuCode/amazon-webpage-automation-selenium
